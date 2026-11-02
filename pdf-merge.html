@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Simple PDF Merge - Combine PDF Files Online | ToolForge</title>
+  <meta name="description" content="Merge multiple PDF files into one single document directly in your browser using pdf-lib. Fast, free, 100% private, with zero server uploads and drag-and-drop reordering.">
+  <link rel="canonical" href="https://toolforge.pages.dev/pdf-merge.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Simple PDF Merge - ToolForge">
+  <meta property="og:description" content="Combine PDF files securely in your browser. No file size limits, no server uploads, powered by pdf-lib.">
+  <meta property="og:url" content="https://toolforge.pages.dev/pdf-merge.html">
+
+    <!-- Google Font Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Free Simple PDF Merge",
+        "url": "https://toolforge.pages.dev/pdf-merge.html",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Combine multiple PDF documents into a single unified file completely client-side in the web browser using pdf-lib."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://toolforge.pages.dev/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "PDF Merge",
+            "item": "https://toolforge.pages.dev/pdf-merge.html"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Are my sensitive PDF documents uploaded to your servers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. All PDF loading, page extraction, and merging executes locally inside your web browser using WebAssembly and pdf-lib. Your confidential tax documents, contracts, and IDs never leave your computer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many PDFs can I merge simultaneously?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Because there are no arbitrary server bandwidth limits, you can merge dozens of PDF files and hundreds of pages, limited only by your device's available browser memory."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I rearrange the order of pages or files?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! You can use the Move Up and Move Down control buttons on any file in your queue to set the exact document order before triggering the merge."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        Tool<span>Forge</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <!-- 1. Images Dropdown (Design.com Multi-Column Mega-Menu) -->
+          <li class="nav-item-dropdown">
+            <a href="image-compressor.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Images
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Compress &amp; Convert</div>
+                  <a href="image-compressor.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Image Studio &amp; Resizer</span>
+                      <span class="dropdown-item-desc">Lossless compression &amp; custom scaling</span>
+                    </div>
+                  </a>
+                  <a href="image-converter.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Format Converter</span>
+                      <span class="dropdown-item-desc">Batch convert JPG, PNG, WebP</span>
+                    </div>
+                  </a>
+                  <a href="image-cropper.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v14a2 2 0 0 0 2 2h14"/><path d="M18 22V8a2 2 0 0 0-2-2H2"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Aspect Ratio &amp; Crop</span>
+                      <span class="dropdown-item-desc">Social 1:1, 16:9, 9:16 presets &amp; flip</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Color &amp; Creative</div>
+                  <a href="image-color-extractor.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Color Palette Extractor</span>
+                      <span class="dropdown-item-desc">Dominant hues &amp; magnifying loupe</span>
+                    </div>
+                  </a>
+                  <a href="image-filters.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18v-18z"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Photo Filters &amp; Effects</span>
+                      <span class="dropdown-item-desc">Cinematic, vintage &amp; tone sliders</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 2. Finance Dropdown (Expanded Suite) -->
+          <li class="nav-item-dropdown">
+            <a href="emi-calculator.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Finance
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Loans &amp; Debt</div>
+                  <a href="emi-calculator.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="3"/><line x1="6" y1="8" x2="18" y2="8"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="6" y1="16" x2="18" y2="16"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Loan &amp; Mortgage Engine</span>
+                      <span class="dropdown-item-desc">Monthly EMI &amp; total interest visualizer</span>
+                    </div>
+                  </a>
+                  <a href="emi-calculator.html#amortization-section" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Amortization Schedule</span>
+                      <span class="dropdown-item-desc">Year-by-year table &amp; CSV export</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Wealth &amp; Taxes</div>
+                  <a href="sip-calculator.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><line x1="12" y1="6" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="18"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">SIP &amp; Wealth Compounder</span>
+                      <span class="dropdown-item-desc">Monthly SIP vs lumpsum growth charts</span>
+                    </div>
+                  </a>
+                  <a href="gst-calculator.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">GST &amp; Sales Tax Studio</span>
+                      <span class="dropdown-item-desc">Add or remove GST with tax split breakdown</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 3. Utilities Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="qr-code-generator.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Utilities
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">QR Code Foundry</div>
+                  <a href="qr-code-generator.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Vector QR Foundry</span>
+                      <span class="dropdown-item-desc">Custom colors, SVG vector &amp; PNG</span>
+                    </div>
+                  </a>
+                  <a href="qr-code-generator.html#wifi" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Wi-Fi Instant Connect QR</span>
+                      <span class="dropdown-item-desc">Scan to auto-connect wireless network</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Vector &amp; Privacy</div>
+                  <a href="qr-code-generator.html#export" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">High-Res Print Vector</span>
+                      <span class="dropdown-item-desc">Infinite scale SVG for billboards &amp; print</span>
+                    </div>
+                  </a>
+                  <a href="privacy.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Air-Gapped Client Privacy</span>
+                      <span class="dropdown-item-desc">100% in-browser, no telemetry</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 4. Writing Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="word-counter.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Writing
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Text Intelligence</div>
+                  <a href="word-counter.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Text Intelligence &amp; Stats</span>
+                      <span class="dropdown-item-desc">Real-time word, character &amp; reading time</span>
+                    </div>
+                  </a>
+                  <a href="word-counter.html#metrics" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Reading &amp; Speaking Velocity</span>
+                      <span class="dropdown-item-desc">Speech pacing &amp; presentation estimates</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Formatting Suite</div>
+                  <a href="word-counter.html#case-tools" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M7 12h10"/><path d="M10 18h4"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Case Transformation Engine</span>
+                      <span class="dropdown-item-desc">UPPERCASE, lowercase, Title Case &amp; clean</span>
+                    </div>
+                  </a>
+                  <a href="word-counter.html#cleaner" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Whitespace &amp; Line Cleanup</span>
+                      <span class="dropdown-item-desc">Strip extra spaces, linebreaks &amp; tabs</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 5. Documents Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="pdf-merge.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Documents
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">PDF Assembly</div>
+                  <a href="pdf-merge.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Confidential PDF Combiner</span>
+                      <span class="dropdown-item-desc">100% in-browser private pdf-lib merge</span>
+                    </div>
+                  </a>
+                  <a href="pdf-merge.html#reorder" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Page Reordering &amp; Queue</span>
+                      <span class="dropdown-item-desc">Re-sequence files before assembling</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Private Engine</div>
+                  <a href="pdf-merge.html#batch" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Multi-File Batch Queue</span>
+                      <span class="dropdown-item-desc">Merge dozens of invoices &amp; reports</span>
+                    </div>
+                  </a>
+                  <a href="privacy.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Zero Server Uploads</span>
+                      <span class="dropdown-item-desc">Your contracts &amp; statements stay offline</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <span class="btn-header-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-success)" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          100% In-Browser
+        </span>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer">
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="image-compressor.html" class="nav-link">Image Compressor &amp; Resizer</a></li>
+        <li><a href="emi-calculator.html" class="nav-link">EMI / Loan Calculator</a></li>
+        <li><a href="qr-code-generator.html" class="nav-link">QR Code Generator</a></li>
+        <li><a href="word-counter.html" class="nav-link">Word &amp; Character Counter</a></li>
+        <li><a href="pdf-merge.html" class="nav-link active">Simple PDF Merge</a></li>
+        <li><a href="about.html" class="nav-link">About ToolForge</a></li>
+        <li><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Top Ad Slot Leaderboard -->
+  <div class="container">
+    <div class="ad-slot ad-leaderboard" data-ad-slot="pdf-merge-top-leaderboard">
+      <div class="ad-slot-inner">Ad Slot Placeholder: 728 &times; 90 Leaderboard</div>
+    </div>
+  </div>
+
+  <main class="container">
+    <!-- Breadcrumb & Header -->
+    <div class="tool-header">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="divider">/</span>
+        <span>Simple PDF Merge</span>
+      </nav>
+      <h1 class="tool-title">Simple PDF Merge</h1>
+      <p class="tool-subtitle">Combine multiple PDF documents into a single file in seconds. 100% private in-browser processing with zero server uploads.</p>
+    </div>
+
+    <!-- Tool Layout -->
+    <div class="tool-layout">
+      <div class="tool-main">
+        <div class="tool-box">
+          <!-- Step 1: Initial Dropzone -->
+          <div id="pdfDropzone" class="dropzone">
+            <svg class="dropzone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="12" y1="18" x2="12" y2="12"></line>
+              <line x1="9" y1="15" x2="15" y2="15"></line>
+            </svg>
+            <p class="dropzone-title">Drop multiple PDF files here, or browse</p>
+            <p class="dropzone-hint">Select 2 or more PDFs &bull; Processed 100% in your browser (Never uploaded)</p>
+            <button type="button" class="btn btn-secondary mt-2">Select PDF Files</button>
+            <input type="file" id="pdfFileInput" multiple accept="application/pdf,.pdf">
+          </div>
+
+          <!-- Step 2: Queue & Controls (Shown when files are loaded) -->
+          <div id="pdfQueueSection" class="hidden">
+            <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:0.75rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+              <h2 style="font-size: 1.2rem; font-weight: 700;">Document Queue</h2>
+              <div style="display:flex; gap:0.5rem; align-items:center;">
+                <label class="btn btn-secondary" style="font-size:0.8125rem; padding:0.4rem 0.8rem; cursor:pointer;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  Add More PDFs
+                  <input type="file" id="addMoreFileInput" multiple accept="application/pdf,.pdf" class="hidden">
+                </label>
+                <button id="clearPdfQueueBtn" class="btn btn-secondary" style="font-size:0.8125rem; padding:0.4rem 0.8rem; color:var(--brand-danger);">Clear All</button>
+              </div>
+            </div>
+
+            <!-- Summary Bar -->
+            <div class="pdf-summary-bar">
+              <div>
+                <span style="font-size: 0.8125rem; color: var(--text-secondary);">Total Files:</span>
+                <strong id="totalFilesCount" style="margin-left: 0.25rem; font-family: var(--font-mono);">0</strong>
+              </div>
+              <div>
+                <span style="font-size: 0.8125rem; color: var(--text-secondary);">Combined Pages:</span>
+                <strong id="totalPagesCount" style="margin-left: 0.25rem; font-family: var(--font-mono);">0</strong>
+              </div>
+              <div>
+                <span style="font-size: 0.8125rem; color: var(--text-secondary);">Combined Size:</span>
+                <strong id="totalSizeCount" style="margin-left: 0.25rem; font-family: var(--font-mono);">0 KB</strong>
+              </div>
+            </div>
+
+            <!-- List of Queued PDF Items -->
+            <div id="pdfQueueList" class="pdf-queue-container">
+              <!-- Rendered items -->
+            </div>
+
+            <!-- Output Options & Merge Button -->
+            <div style="border-top: 1px solid var(--border-color); padding-top: 1.25rem; margin-top: 1.5rem;">
+              <div class="form-group">
+                <label for="outputPdfName" class="form-label">Output File Name</label>
+                <input type="text" id="outputPdfName" class="form-input" value="merged-documents.pdf" placeholder="merged-documents.pdf">
+              </div>
+
+              <!-- Progress bar -->
+              <div id="mergeProgress" class="hidden mb-4" style="background:var(--bg-primary); border:1px solid var(--border-color); padding: 0.875rem 1.25rem; border-radius: var(--radius-md); text-align:center;">
+                <div style="display:inline-block; width:16px; height:16px; border:2px solid var(--brand-primary); border-top-color:transparent; border-radius:50%; animation: spin 0.8s linear infinite; vertical-align:middle; margin-right:0.5rem;"></div>
+                <span id="mergeStatusText" style="font-size:0.875rem; font-weight:600; color:var(--text-primary);">Merging documents...</span>
+              </div>
+
+              <button id="mergePdfBtn" class="btn btn-primary btn-block" style="font-size:1.05rem; padding:0.85rem;" disabled>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                Merge PDFs Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- In-Content Ad Slot -->
+        <div class="ad-slot ad-banner" data-ad-slot="pdf-merge-mid-banner">
+          <div class="ad-slot-inner">Ad Slot Placeholder: Responsive Content Banner</div>
+        </div>
+
+        <!-- How To Use Section -->
+        <section class="content-section">
+          <h2>How to Merge PDF Files Online</h2>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-num">1</div>
+              <h3 class="step-title">Upload Documents</h3>
+              <p class="step-desc">Drag and drop two or more PDF files into the dropzone or select them with the file browser.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">2</div>
+              <h3 class="step-title">Order Your Files</h3>
+              <p class="step-desc">Use the Up and Down arrow buttons to arrange your PDFs in the exact reading order you desire.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">3</div>
+              <h3 class="step-title">Merge &amp; Save</h3>
+              <p class="step-desc">Click "Merge PDFs Now". Your unified PDF is generated in your browser and downloaded instantly.</p>
+            </div>
+          </div>
+
+          <h3>Why Client-Side PDF Processing Protects Your Data</h3>
+          <p>Traditional PDF utilities upload your documents to cloud servers to perform merging operations. When working with sensitive contracts, medical records, invoices, or bank statements, uploading files to unfamiliar servers poses grave confidentiality risks.</p>
+          <p>ToolForge uses <strong>pdf-lib</strong> compiled to run entirely inside your browser's JavaScript engine. Your documents never traverse the internet, are never stored in a temporary cloud folder, and remain 100% private on your own machine.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="content-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Are my confidential PDF documents safe?</span>
+                <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. ToolForge operates with zero backend servers. All PDF parsing, binary assembling, and saving occurs in local device memory via the browser. No third party ever has access to your files.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Is there a maximum file size or page limit?</span>
+                <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>There are no artificial limits imposed. You can merge PDFs with hundreds of pages. The only ceiling is your device's available browser RAM memory.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Can I merge encrypted or password-protected PDFs?</span>
+                <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>If a PDF is encrypted with an opening password, it cannot be read without first decrypting it. Please remove password restrictions from protected files prior to merging.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="tool-sidebar">
+        <!-- Sidebar Ad Slot -->
+        <div class="ad-slot ad-rectangle" data-ad-slot="pdf-merge-sidebar-rect">
+          <div class="ad-slot-inner">Ad Slot Placeholder: 300 &times; 250 Medium Rectangle</div>
+        </div>
+
+        <!-- Privacy Box -->
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">Privacy Assured</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.625rem; font-size: 0.875rem; color: var(--text-secondary);">
+            <li style="display:flex; align-items:center; gap:0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Zero Server Uploads
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Secure In-Memory Merge
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Custom File Reordering
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Preserves Vector Quality
+            </li>
+          </ul>
+        </div>
+
+        <!-- Related Tools -->
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">Explore More Free Tools</h3>
+          <div class="related-tool-list">
+            <a href="image-compressor.html" class="related-tool-item">
+              <div class="related-tool-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              </div>
+              <div>
+                <div style="font-weight:600; font-size:0.875rem;">Image Compressor</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Shrink image sizes</div>
+              </div>
+            </a>
+
+            <a href="emi-calculator.html" class="related-tool-item">
+              <div class="related-tool-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="3"></rect><line x1="6" y1="8" x2="18" y2="8"></line><line x1="6" y1="12" x2="18" y2="12"></line></svg>
+              </div>
+              <div>
+                <div style="font-weight:600; font-size:0.875rem;">EMI Calculator</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Monthly loan calculator</div>
+              </div>
+            </a>
+
+            <a href="qr-code-generator.html" class="related-tool-item">
+              <div class="related-tool-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              </div>
+              <div>
+                <div style="font-weight:600; font-size:0.875rem;">QR Code Generator</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Custom QR codes</div>
+              </div>
+            </a>
+
+            <a href="word-counter.html" class="related-tool-item">
+              <div class="related-tool-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"></path><path d="M9 20h6"></path><path d="M12 4v16"></path></svg>
+              </div>
+              <div>
+                <div style="font-weight:600; font-size:0.875rem;">Word &amp; Character Counter</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Real-time text stats</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+            Tool<span>Forge</span>
+          </a>
+          <p>Free client-side online tools for web developers, designers, and professionals. 100% private, runs entirely inside your browser.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Free Tools</h4>
+          <ul class="footer-links">
+            <li><a href="image-compressor.html">Image Compressor</a></li>
+            <li><a href="image-converter.html">Format Converter</a></li>
+            <li><a href="image-cropper.html">Image Cropper</a></li>
+            <li><a href="image-color-extractor.html">Color Extractor</a></li>
+            <li><a href="image-filters.html">Photo Filters</a></li>
+            <li><a href="emi-calculator.html">Loan Calculator</a></li>
+            <li><a href="sip-calculator.html">SIP Wealth Calculator</a></li>
+            <li><a href="gst-calculator.html">GST Tax Calculator</a></li>
+            <li><a href="qr-code-generator.html">QR Code Foundry</a></li>
+            <li><a href="word-counter.html">Text Intelligence</a></li>
+            <li><a href="pdf-merge.html">PDF Combiner</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact &amp; Feedback</a></li>
+            <li><a href="sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal &amp; Privacy</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ToolForge. All rights reserved.</p>
+        <p>100% Client-Side Processing &bull; Static Site</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/vendor/pdf-lib.min.js"></script>
+  <script src="assets/js/pdf-merge.js"></script>
+</body>
+</html>

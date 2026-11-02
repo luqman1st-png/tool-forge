@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free GST &amp; Sales Tax Calculator - Add or Remove GST Online | ToolForge</title>
+  <meta name="description" content="Calculate GST and sales tax instantly online. Add or remove GST (inclusive vs exclusive) with 5%, 12%, 18%, 28% slabs. Includes CGST, SGST, and IGST breakdown. 100% free.">
+  <link rel="canonical" href="https://toolforge.pages.dev/gst-calculator.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free GST & Sales Tax Calculator - ToolForge">
+  <meta property="og:description" content="Calculate inclusive and exclusive GST, sales tax slabs, and CGST/SGST splits online with 100% privacy.">
+  <meta property="og:url" content="https://toolforge.pages.dev/gst-calculator.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "GST and Sales Tax Calculator",
+        "url": "https://toolforge.pages.dev/gst-calculator.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Add or remove GST tax, calculate CGST/SGST splits, and preview invoices client-side."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://toolforge.pages.dev/" },
+          { "@type": "ListItem", "position": 2, "name": "Finance", "item": "https://toolforge.pages.dev/emi-calculator.html" },
+          { "@type": "ListItem", "position": 3, "name": "GST Calculator", "item": "https://toolforge.pages.dev/gst-calculator.html" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between GST Inclusive and Exclusive?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GST Exclusive means the price stated does not yet include tax, so GST is added on top. GST Inclusive means the sticker price already contains tax, so calculating it separates the base price from the embedded tax component."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is CGST and SGST divided?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For intrastate transactions within the same state or province, GST is divided equally: 50% goes to the Central Government (CGST) and 50% goes to the State Government (SGST)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I calculate international sales tax or VAT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Select the 'Custom %' button and input your local state sales tax or country VAT percentage (e.g. 7%, 8.25%, 20%) to compute invoices instantly."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        Tool<span>Forge</span>
+      </a>
+
+      <!-- Canonical Main Navigation with Dropdowns -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <!-- 1. Images Dropdown (Design.com Multi-Column Mega-Menu) -->
+          <li class="nav-item-dropdown">
+            <a href="image-compressor.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Images
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Compress &amp; Convert</div>
+                  <a href="image-compressor.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Image Studio &amp; Resizer</span>
+                      <span class="dropdown-item-desc">Lossless compression &amp; custom scaling</span>
+                    </div>
+                  </a>
+                  <a href="image-converter.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Format Converter</span>
+                      <span class="dropdown-item-desc">Batch convert JPG, PNG, WebP</span>
+                    </div>
+                  </a>
+                  <a href="image-cropper.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v14a2 2 0 0 0 2 2h14"/><path d="M18 22V8a2 2 0 0 0-2-2H2"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Aspect Ratio &amp; Crop</span>
+                      <span class="dropdown-item-desc">Social 1:1, 16:9, 9:16 presets &amp; flip</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Color &amp; Creative</div>
+                  <a href="image-color-extractor.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Color Palette Extractor</span>
+                      <span class="dropdown-item-desc">Dominant hues &amp; magnifying loupe</span>
+                    </div>
+                  </a>
+                  <a href="image-filters.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18v-18z"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Photo Filters &amp; Effects</span>
+                      <span class="dropdown-item-desc">Cinematic, vintage &amp; tone sliders</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 2. Finance Dropdown (Expanded Suite) -->
+          <li class="nav-item-dropdown">
+            <a href="emi-calculator.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Finance
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Loans &amp; Debt</div>
+                  <a href="emi-calculator.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="3"/><line x1="6" y1="8" x2="18" y2="8"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="6" y1="16" x2="18" y2="16"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Loan &amp; Mortgage Engine</span>
+                      <span class="dropdown-item-desc">Monthly EMI &amp; total interest visualizer</span>
+                    </div>
+                  </a>
+                  <a href="emi-calculator.html#amortization-section" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Amortization Schedule</span>
+                      <span class="dropdown-item-desc">Year-by-year table &amp; CSV export</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Wealth &amp; Taxes</div>
+                  <a href="sip-calculator.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><line x1="12" y1="6" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="18"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">SIP &amp; Wealth Compounder</span>
+                      <span class="dropdown-item-desc">Monthly SIP vs lumpsum growth charts</span>
+                    </div>
+                  </a>
+                  <a href="gst-calculator.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">GST &amp; Sales Tax Studio</span>
+                      <span class="dropdown-item-desc">Add or remove GST with tax split breakdown</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 3. Utilities Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="qr-code-generator.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Utilities
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">QR Code Foundry</div>
+                  <a href="qr-code-generator.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Vector QR Foundry</span>
+                      <span class="dropdown-item-desc">Custom colors, SVG vector &amp; PNG</span>
+                    </div>
+                  </a>
+                  <a href="qr-code-generator.html#wifi" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Wi-Fi Instant Connect QR</span>
+                      <span class="dropdown-item-desc">Scan to auto-connect wireless network</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Vector &amp; Privacy</div>
+                  <a href="qr-code-generator.html#export" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">High-Res Print Vector</span>
+                      <span class="dropdown-item-desc">Infinite scale SVG for billboards &amp; print</span>
+                    </div>
+                  </a>
+                  <a href="privacy.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Air-Gapped Client Privacy</span>
+                      <span class="dropdown-item-desc">100% in-browser, no telemetry</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 4. Writing Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="word-counter.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Writing
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Text Intelligence</div>
+                  <a href="word-counter.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Text Intelligence &amp; Stats</span>
+                      <span class="dropdown-item-desc">Real-time word, character &amp; reading time</span>
+                    </div>
+                  </a>
+                  <a href="word-counter.html#metrics" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Reading &amp; Speaking Velocity</span>
+                      <span class="dropdown-item-desc">Speech pacing &amp; presentation estimates</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Formatting Suite</div>
+                  <a href="word-counter.html#case-tools" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M7 12h10"/><path d="M10 18h4"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Case Transformation Engine</span>
+                      <span class="dropdown-item-desc">UPPERCASE, lowercase, Title Case &amp; clean</span>
+                    </div>
+                  </a>
+                  <a href="word-counter.html#cleaner" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Whitespace &amp; Line Cleanup</span>
+                      <span class="dropdown-item-desc">Strip extra spaces, linebreaks &amp; tabs</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 5. Documents Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="pdf-merge.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Documents
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">PDF Assembly</div>
+                  <a href="pdf-merge.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Confidential PDF Combiner</span>
+                      <span class="dropdown-item-desc">100% in-browser private pdf-lib merge</span>
+                    </div>
+                  </a>
+                  <a href="pdf-merge.html#reorder" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Page Reordering &amp; Queue</span>
+                      <span class="dropdown-item-desc">Re-sequence files before assembling</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Private Engine</div>
+                  <a href="pdf-merge.html#batch" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Multi-File Batch Queue</span>
+                      <span class="dropdown-item-desc">Merge dozens of invoices &amp; reports</span>
+                    </div>
+                  </a>
+                  <a href="privacy.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Zero Server Uploads</span>
+                      <span class="dropdown-item-desc">Your contracts &amp; statements stay offline</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <span class="btn-header-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-success)" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          100% In-Browser
+        </span>
+
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+          <svg class="icon-moon hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer">
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="image-compressor.html" class="nav-link">Image Compressor</a></li>
+        <li><a href="image-converter.html" class="nav-link">Format Converter</a></li>
+        <li><a href="image-cropper.html" class="nav-link">Image Cropper</a></li>
+        <li><a href="image-color-extractor.html" class="nav-link">Color Extractor</a></li>
+        <li><a href="image-filters.html" class="nav-link">Photo Filters</a></li>
+        <li><a href="emi-calculator.html" class="nav-link">Loan EMI Calculator</a></li>
+        <li><a href="sip-calculator.html" class="nav-link">SIP Wealth Calculator</a></li>
+        <li><a href="gst-calculator.html" class="nav-link active">GST Tax Calculator</a></li>
+        <li><a href="qr-code-generator.html" class="nav-link">QR Generator</a></li>
+        <li><a href="word-counter.html" class="nav-link">Word Counter</a></li>
+        <li><a href="pdf-merge.html" class="nav-link">PDF Merge</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Top Ad Slot Leaderboard -->
+  <div class="container">
+    <div class="ad-slot ad-leaderboard" data-ad-slot="gst-calculator-top-leaderboard">
+      <div class="ad-slot-inner">Ad Slot Placeholder: 728 &times; 90 Leaderboard</div>
+    </div>
+  </div>
+
+  <main class="container">
+    <!-- Breadcrumb & Header -->
+    <div class="tool-header">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="divider">/</span>
+        <a href="emi-calculator.html">Finance</a>
+        <span class="divider">/</span>
+        <span>GST &amp; Sales Tax Calculator</span>
+      </nav>
+      <h1 class="tool-title">Free GST &amp; Sales Tax Calculator</h1>
+      <p class="tool-subtitle">Add or reverse-calculate GST and VAT. Instant breakdown of Central GST (CGST), State GST (SGST), base net amount, and final gross invoice.</p>
+    </div>
+
+    <!-- Tool Layout -->
+    <div class="tool-layout">
+      <div class="tool-main">
+        <div class="tool-box">
+          <!-- GST Operation Mode & Currency -->
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom: 2rem;">
+            <div class="btn-group" role="tablist">
+              <button type="button" class="btn btn-primary btn-gst-mode" data-mode="exclusive">Add GST (Exclusive)</button>
+              <button type="button" class="btn btn-secondary btn-gst-mode" data-mode="inclusive">Remove GST (Inclusive)</button>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:0.5rem;">
+              <label for="currencySelect" style="font-size:0.875rem; color:var(--text-secondary); font-weight:600;">Currency:</label>
+              <select id="currencySelect" class="form-select" style="padding: 0.35rem 0.65rem; width: auto; font-size: 0.875rem;">
+                <option value="$">$ (USD)</option>
+                <option value="₹" selected>₹ (INR)</option>
+                <option value="£">£ (GBP)</option>
+                <option value="€">€ (EUR)</option>
+                <option value="AED">AED</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Base Amount Input -->
+          <div class="form-group">
+            <div class="form-label-row">
+              <label id="amountInputLabel" for="baseAmountInput" class="form-label">Initial Amount (Before GST)</label>
+              <span id="amountDisplay" class="form-label-value">₹ 10,000</span>
+            </div>
+            <input type="number" id="baseAmountInput" class="form-input mb-2" value="10000" min="0" step="10">
+          </div>
+
+          <!-- Tax Slabs Buttons -->
+          <div class="form-group">
+            <label class="form-label" style="margin-bottom: 0.75rem;">Select GST / Tax Rate Slab</label>
+            <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+              <button type="button" class="btn-tax-slab" data-rate="0">0%</button>
+              <button type="button" class="btn-tax-slab" data-rate="5">5%</button>
+              <button type="button" class="btn-tax-slab" data-rate="12">12%</button>
+              <button type="button" class="btn-tax-slab active" data-rate="18">18%</button>
+              <button type="button" class="btn-tax-slab" data-rate="28">28%</button>
+              <button type="button" class="btn-tax-slab" data-rate="custom">Custom %</button>
+            </div>
+            <!-- Custom rate input (shown if custom clicked) -->
+            <div id="customRateRow" class="hidden" style="margin-top: 1rem; max-width: 220px;">
+              <label for="customRateInput" style="font-size:0.8rem; color:var(--text-muted);">Custom Tax Rate (%):</label>
+              <input type="number" id="customRateInput" class="form-input" value="18" min="0" max="100" step="0.1">
+            </div>
+          </div>
+
+          <!-- Invoice Summary Card -->
+          <div class="emi-summary-card" style="margin-top: 2rem;">
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <div class="metric-label" id="netLabel">Net Amount (Base)</div>
+                <div id="netResult" class="metric-value">₹ 10,000</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label">Total GST Tax</div>
+                <div id="gstResult" class="metric-value" style="color:var(--brand-accent);">₹ 1,800</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-label" id="grossLabel">Total Gross Amount</div>
+                <div id="grossResult" class="metric-value" style="font-weight:800; color:var(--brand-success);">₹ 11,800</div>
+              </div>
+            </div>
+
+            <!-- Tax Split Matrix Table -->
+            <div style="margin-top: 2rem; background:var(--bg-secondary); border-radius:var(--radius-md); padding:1.25rem; border:1px solid var(--border-color);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                <h4 style="font-size:0.95rem; font-weight:700; margin:0;">Tax Split Breakdown</h4>
+                <button type="button" class="btn btn-secondary btn-sm" id="copyInvoiceBtn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  Copy Summary
+                </button>
+              </div>
+
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1rem;">
+                <div style="padding:0.75rem; background:var(--bg-surface); border-radius:var(--radius-sm); border:1px solid var(--border-color);">
+                  <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">Central GST (CGST)</div>
+                  <div id="cgstResult" style="font-size:1.1rem; font-weight:700; font-family:var(--font-mono); margin-top:0.25rem;">₹ 900 (9%)</div>
+                </div>
+
+                <div style="padding:0.75rem; background:var(--bg-surface); border-radius:var(--radius-sm); border:1px solid var(--border-color);">
+                  <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">State GST (SGST)</div>
+                  <div id="sgstResult" style="font-size:1.1rem; font-weight:700; font-family:var(--font-mono); margin-top:0.25rem;">₹ 900 (9%)</div>
+                </div>
+
+                <div style="padding:0.75rem; background:var(--bg-surface); border-radius:var(--radius-sm); border:1px solid var(--border-color);">
+                  <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">Interstate GST (IGST)</div>
+                  <div id="igstResult" style="font-size:1.1rem; font-weight:700; font-family:var(--font-mono); margin-top:0.25rem;">₹ 1,800 (18%)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- In-Content Ad Slot -->
+        <div class="ad-slot ad-banner" data-ad-slot="gst-calculator-mid-banner">
+          <div class="ad-slot-inner">Ad Slot Placeholder: Responsive Content Banner</div>
+        </div>
+
+        <!-- Educational Information Section -->
+        <section class="info-section">
+          <h2>How GST is Calculated: Formulas &amp; Slabs</h2>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-num">1</div>
+              <h3>Adding GST (Exclusive)</h3>
+              <p>Formula: <code>GST Amount = (Original Cost &times; GST%) &divide; 100</code>.<br>Net invoice = Original Cost + GST Amount.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">2</div>
+              <h3>Removing GST (Inclusive)</h3>
+              <p>Formula: <code>GST Amount = Cost - [Cost &times; {100 &divide; (100 + GST%)}]</code>.<br>This extracts the true base cost from an MRP sticker price.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">3</div>
+              <h3>CGST, SGST &amp; IGST</h3>
+              <p>Within the same state, tax is split 50/50 between Central and State. Across state boundaries, the entire tax is filed as Integrated GST (IGST).</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="info-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What is the difference between GST inclusive and exclusive pricing?</span>
+                <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Exclusive GST applies when a seller quotes wholesale or service costs without tax, meaning GST will be added on top. Inclusive GST applies to consumer retail products where the price tag already accounts for all taxes.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Which goods fall into the 5%, 12%, 18%, and 28% tax slabs?</span>
+                <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>5% covers basic groceries and household goods; 12% applies to standard processed foods and apparel; 18% covers software, restaurants, and IT services; and 28% applies to automobiles and luxury items.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Can I use this tool for international sales tax or VAT?</span>
+                <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Simply click the "Custom %" slab button and enter your local tax rate (e.g., 7% US sales tax, 20% UK VAT, or 5% UAE VAT).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="tool-sidebar">
+        <!-- Sidebar Ad Unit -->
+        <div class="ad-slot ad-rectangle" data-ad-slot="gst-sidebar-rect">
+          <div class="ad-slot-inner">Ad Slot: 300 &times; 250 Rectangle</div>
+        </div>
+
+        <!-- Privacy Box -->
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-success)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            100% Private Computing
+          </h3>
+          <p style="font-size:0.875rem; color:var(--text-secondary); line-height:1.6;">
+            All invoice splits and percentage equations are calculated in your browser's local memory. No transactional numbers are ever transmitted or stored.
+          </p>
+        </div>
+
+        <!-- Related Finance Utilities -->
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">Explore Finance Studio</h3>
+          <div class="related-tool-list">
+            <a href="emi-calculator.html" class="related-tool-item">
+              <div class="related-tool-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="3"/><line x1="6" y1="8" x2="18" y2="8"/><line x1="6" y1="12" x2="18" y2="12"/></svg>
+              </div>
+              <div>
+                <div style="font-weight:600; font-size:0.875rem;">Loan &amp; Mortgage Engine</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Monthly EMI &amp; amortization</div>
+              </div>
+            </a>
+
+            <a href="sip-calculator.html" class="related-tool-item">
+              <div class="related-tool-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              </div>
+              <div>
+                <div style="font-weight:600; font-size:0.875rem;">SIP &amp; Wealth Growth</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Mutual fund compound returns</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <div class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            Tool<span>Forge</span>
+          </a>
+          <p>Studio-grade, ultra-fast online productivity utilities. All processing happens client-side in your browser for absolute privacy and speed.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Free Tools</h4>
+          <ul class="footer-links">
+            <li><a href="image-compressor.html">Image Compressor</a></li>
+            <li><a href="image-converter.html">Format Converter</a></li>
+            <li><a href="image-cropper.html">Image Cropper</a></li>
+            <li><a href="image-color-extractor.html">Color Extractor</a></li>
+            <li><a href="image-filters.html">Photo Filters</a></li>
+            <li><a href="emi-calculator.html">Loan Calculator</a></li>
+            <li><a href="sip-calculator.html">SIP Wealth Calculator</a></li>
+            <li><a href="gst-calculator.html">GST Tax Calculator</a></li>
+            <li><a href="qr-code-generator.html">QR Code Foundry</a></li>
+            <li><a href="word-counter.html">Text Intelligence</a></li>
+            <li><a href="pdf-merge.html">PDF Combiner</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact &amp; Feedback</a></li>
+            <li><a href="sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal &amp; Privacy</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ToolForge. All rights reserved.</p>
+        <p>100% Client-Side Processing &bull; Static Site</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/gst-calculator.js"></script>
+</body>
+</html>

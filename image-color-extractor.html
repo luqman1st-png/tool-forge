@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Image Color Palette Extractor &amp; Eyedropper - ToolForge</title>
+  <meta name="description" content="Extract dominant color palettes and pick exact pixel colors from any image online. Get HEX, RGB, HSL codes and export CSS variables. 100% free and private in-browser tool.">
+  <link rel="canonical" href="https://toolforge.pages.dev/image-color-extractor.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Image Color Palette Extractor & Eyedropper - ToolForge">
+  <meta property="og:description" content="Extract dominant color palettes and sample exact pixel colors from any image. Free, private, and instant.">
+  <meta property="og:url" content="https://toolforge.pages.dev/image-color-extractor.html">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Image Color Palette Extractor & Eyedropper",
+        "url": "https://toolforge.pages.dev/image-color-extractor.html",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "All",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Extract dominant color palettes and sample individual pixel colors from uploaded photos client-side."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://toolforge.pages.dev/" },
+          { "@type": "ListItem", "position": 2, "name": "Color Extractor", "item": "https://toolforge.pages.dev/image-color-extractor.html" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does the color extractor determine dominant colors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The tool analyzes image pixel data using an in-browser HTML5 Canvas color quantization algorithm. It clusters similar hues and extracts the top dominant harmonious shades."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I pick a specific pixel color from my photo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Move your cursor over the image preview to view the magnified loupe and click anywhere to sample that exact pixel color in HEX, RGB, and HSL formats."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are my images uploaded to any server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. All pixel sampling and color analysis happen 100% locally on your device within your browser."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        Tool<span>Forge</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <!-- 1. Images Dropdown (Design.com Multi-Column Mega-Menu) -->
+          <li class="nav-item-dropdown">
+            <a href="image-compressor.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Images
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Compress &amp; Convert</div>
+                  <a href="image-compressor.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Image Studio &amp; Resizer</span>
+                      <span class="dropdown-item-desc">Lossless compression &amp; custom scaling</span>
+                    </div>
+                  </a>
+                  <a href="image-converter.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Format Converter</span>
+                      <span class="dropdown-item-desc">Batch convert JPG, PNG, WebP</span>
+                    </div>
+                  </a>
+                  <a href="image-cropper.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v14a2 2 0 0 0 2 2h14"/><path d="M18 22V8a2 2 0 0 0-2-2H2"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Aspect Ratio &amp; Crop</span>
+                      <span class="dropdown-item-desc">Social 1:1, 16:9, 9:16 presets &amp; flip</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Color &amp; Creative</div>
+                  <a href="image-color-extractor.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Color Palette Extractor</span>
+                      <span class="dropdown-item-desc">Dominant hues &amp; magnifying loupe</span>
+                    </div>
+                  </a>
+                  <a href="image-filters.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18v-18z"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Photo Filters &amp; Effects</span>
+                      <span class="dropdown-item-desc">Cinematic, vintage &amp; tone sliders</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 2. Finance Dropdown (Expanded Suite) -->
+          <li class="nav-item-dropdown">
+            <a href="emi-calculator.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Finance
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Loans &amp; Debt</div>
+                  <a href="emi-calculator.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="3"/><line x1="6" y1="8" x2="18" y2="8"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="6" y1="16" x2="18" y2="16"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Loan &amp; Mortgage Engine</span>
+                      <span class="dropdown-item-desc">Monthly EMI &amp; total interest visualizer</span>
+                    </div>
+                  </a>
+                  <a href="emi-calculator.html#amortization-section" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Amortization Schedule</span>
+                      <span class="dropdown-item-desc">Year-by-year table &amp; CSV export</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Wealth &amp; Taxes</div>
+                  <a href="sip-calculator.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><line x1="12" y1="6" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="18"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">SIP &amp; Wealth Compounder</span>
+                      <span class="dropdown-item-desc">Monthly SIP vs lumpsum growth charts</span>
+                    </div>
+                  </a>
+                  <a href="gst-calculator.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">GST &amp; Sales Tax Studio</span>
+                      <span class="dropdown-item-desc">Add or remove GST with tax split breakdown</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 3. Utilities Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="qr-code-generator.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Utilities
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">QR Code Foundry</div>
+                  <a href="qr-code-generator.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Vector QR Foundry</span>
+                      <span class="dropdown-item-desc">Custom colors, SVG vector &amp; PNG</span>
+                    </div>
+                  </a>
+                  <a href="qr-code-generator.html#wifi" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Wi-Fi Instant Connect QR</span>
+                      <span class="dropdown-item-desc">Scan to auto-connect wireless network</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Vector &amp; Privacy</div>
+                  <a href="qr-code-generator.html#export" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">High-Res Print Vector</span>
+                      <span class="dropdown-item-desc">Infinite scale SVG for billboards &amp; print</span>
+                    </div>
+                  </a>
+                  <a href="privacy.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Air-Gapped Client Privacy</span>
+                      <span class="dropdown-item-desc">100% in-browser, no telemetry</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 4. Writing Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="word-counter.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Writing
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Text Intelligence</div>
+                  <a href="word-counter.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Text Intelligence &amp; Stats</span>
+                      <span class="dropdown-item-desc">Real-time word, character &amp; reading time</span>
+                    </div>
+                  </a>
+                  <a href="word-counter.html#metrics" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Reading &amp; Speaking Velocity</span>
+                      <span class="dropdown-item-desc">Speech pacing &amp; presentation estimates</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Formatting Suite</div>
+                  <a href="word-counter.html#case-tools" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M7 12h10"/><path d="M10 18h4"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Case Transformation Engine</span>
+                      <span class="dropdown-item-desc">UPPERCASE, lowercase, Title Case &amp; clean</span>
+                    </div>
+                  </a>
+                  <a href="word-counter.html#cleaner" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Whitespace &amp; Line Cleanup</span>
+                      <span class="dropdown-item-desc">Strip extra spaces, linebreaks &amp; tabs</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 5. Documents Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="pdf-merge.html" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Documents
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <div class="mega-menu-grid">
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">PDF Assembly</div>
+                  <a href="pdf-merge.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Confidential PDF Combiner</span>
+                      <span class="dropdown-item-desc">100% in-browser private pdf-lib merge</span>
+                    </div>
+                  </a>
+                  <a href="pdf-merge.html#reorder" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Page Reordering &amp; Queue</span>
+                      <span class="dropdown-item-desc">Re-sequence files before assembling</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="mega-menu-col">
+                  <div class="mega-menu-header">Private Engine</div>
+                  <a href="pdf-merge.html#batch" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Multi-File Batch Queue</span>
+                      <span class="dropdown-item-desc">Merge dozens of invoices &amp; reports</span>
+                    </div>
+                  </a>
+                  <a href="privacy.html" class="dropdown-item">
+                    <div class="dropdown-item-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                    </div>
+                    <div class="dropdown-item-content">
+                      <span class="dropdown-item-title">Zero Server Uploads</span>
+                      <span class="dropdown-item-desc">Your contracts &amp; statements stay offline</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <span class="btn-header-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-success)" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          100% In-Browser
+        </span>
+
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+          <svg class="icon-moon hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer">
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="image-compressor.html" class="nav-link">Image Compressor</a></li>
+        <li><a href="image-converter.html" class="nav-link">Format Converter</a></li>
+        <li><a href="image-cropper.html" class="nav-link">Image Cropper</a></li>
+        <li><a href="image-color-extractor.html" class="nav-link active">Color Extractor</a></li>
+        <li><a href="image-filters.html" class="nav-link">Photo Filters</a></li>
+        <li><a href="emi-calculator.html" class="nav-link">EMI Calculator</a></li>
+        <li><a href="qr-code-generator.html" class="nav-link">QR Generator</a></li>
+        <li><a href="word-counter.html" class="nav-link">Word Counter</a></li>
+        <li><a href="pdf-merge.html" class="nav-link">PDF Merge</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Bar -->
+  <div class="breadcrumb-bar">
+    <div class="container breadcrumb-inner">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="index.html#image-tools">Image Studio</a>
+      <span>/</span>
+      <span class="current">Color Palette Extractor</span>
+    </div>
+  </div>
+
+  <!-- Top Ad Slot -->
+  <div class="container">
+    <div class="ad-slot ad-slot-header" id="ad-header">
+      <span class="ad-slot-label">Sponsored Advertisement</span>
+      <div class="ad-slot-placeholder">Ad Unit Header (728x90)</div>
+    </div>
+  </div>
+
+  <!-- Main Tool Container -->
+  <main class="container tool-main">
+    <div class="tool-layout">
+      <!-- Tool Working Area -->
+      <article class="tool-content">
+        <header class="tool-header">
+          <span class="tool-badge">Creative Color Suite</span>
+          <h1 class="tool-title">Image Color Palette Extractor &amp; Eyedropper</h1>
+          <p class="tool-subtitle">Upload any image to automatically extract its dominant color scheme, or hover and click with the live eyedropper to grab exact HEX, RGB, and HSL codes.</p>
+        </header>
+
+        <!-- Drop Zone Card -->
+        <div class="card" id="dropCard">
+          <div class="drop-zone" id="dropZone" tabindex="0" role="button" aria-label="Upload image to extract color palette">
+            <div class="drop-zone-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m4.93 4.93 4.24 4.24"></path>
+                <circle cx="12" cy="8" r="1.5" fill="currentColor"></circle>
+                <circle cx="16" cy="12" r="1.5" fill="currentColor"></circle>
+                <circle cx="12" cy="16" r="1.5" fill="currentColor"></circle>
+                <circle cx="8" cy="12" r="1.5" fill="currentColor"></circle>
+              </svg>
+            </div>
+            <div class="drop-zone-title">Drag &amp; drop an image here, or <span>browse files</span></div>
+            <div class="drop-zone-hint">Supports PNG, JPG, WebP, GIF, SVG &bull; 100% Private Client-Side Processing</div>
+            <input type="file" id="fileInput" accept="image/*" class="sr-only">
+          </div>
+
+          <div style="text-align: center; margin-top: 1.25rem;">
+            <button type="button" class="btn btn-secondary btn-sm" id="sampleBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              Try with a Sample Sunset Artwork
+            </button>
+          </div>
+        </div>
+
+        <!-- Working Workspace (Hidden until image selected) -->
+        <div id="paletteWorkspace" class="hidden" style="margin-top: 2rem;">
+
+          <!-- Dominant Palette Card -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <div class="card-header-flex" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+              <div>
+                <h2 style="font-size:1.25rem; font-weight:700; margin:0;">Extracted Color Palette</h2>
+                <p style="color:var(--text-muted); font-size:0.875rem; margin:0.25rem 0 0 0;">Top dominant harmonic hues detected from your artwork. Click any color to copy.</p>
+              </div>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <button type="button" class="btn btn-secondary btn-sm" id="copyCssBtn" title="Copy as CSS variables">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  Copy CSS
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm" id="copyJsonBtn" title="Copy as JSON array">
+                  JSON
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm" id="downloadPaletteBtn" title="Export as image swatch card">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  Export Card
+                </button>
+              </div>
+            </div>
+
+            <!-- Palette Swatches Grid -->
+            <div id="swatchesContainer" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:1rem;">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Eyedropper & Interactive Canvas Area -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; flex-wrap:wrap; gap:1rem;">
+              <div>
+                <h3 style="font-size:1.15rem; font-weight:700; margin:0;">Interactive Eyedropper &amp; Pixel Inspector</h3>
+                <p style="color:var(--text-muted); font-size:0.85rem; margin:0.25rem 0 0 0;">Move cursor over the canvas to inspect pixels. Click anywhere to sample.</p>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" id="newImageBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                Choose Another Image
+              </button>
+            </div>
+
+            <!-- Active Sample Bar -->
+            <div id="sampleBar" style="display:flex; align-items:center; gap:1.25rem; padding:1rem 1.25rem; background:var(--bg-card-hover); border:1px solid var(--border-color); border-radius:var(--radius-md); margin-bottom:1.5rem; flex-wrap:wrap;">
+              <div id="sampleColorBox" style="width:52px; height:52px; border-radius:var(--radius-sm); border:2px solid var(--border-color); box-shadow:0 4px 12px rgba(0,0,0,0.25); background:#6366f1; flex-shrink:0;"></div>
+              
+              <div style="display:flex; flex-direction:column; gap:0.25rem; min-width:140px;">
+                <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:600; letter-spacing:0.05em;">Selected Hex</span>
+                <span id="selectedHex" style="font-family:var(--font-mono); font-size:1.25rem; font-weight:700; color:var(--text-primary); cursor:pointer;" title="Click to copy">#6366F1</span>
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:0.25rem; min-width:160px;">
+                <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:600; letter-spacing:0.05em;">RGB Value</span>
+                <span id="selectedRgb" style="font-family:var(--font-mono); font-size:0.95rem; color:var(--text-secondary); cursor:pointer;" title="Click to copy">rgb(99, 102, 241)</span>
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:0.25rem; min-width:160px;">
+                <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:600; letter-spacing:0.05em;">HSL Value</span>
+                <span id="selectedHsl" style="font-family:var(--font-mono); font-size:0.95rem; color:var(--text-secondary);">hsl(239, 84%, 67%)</span>
+              </div>
+
+              <button type="button" class="btn btn-primary btn-sm" id="copySelectedHexBtn" style="margin-left:auto;">
+                Copy HEX
+              </button>
+            </div>
+
+            <!-- Canvas Container with Magnifier Loupe -->
+            <div style="position:relative; overflow:hidden; border-radius:var(--radius-md); background:var(--bg-canvas-checkered); border:1px solid var(--border-color); display:flex; justify-content:center; align-items:center; max-height:550px; cursor:crosshair;">
+              <canvas id="mainCanvas" style="max-width:100%; height:auto; display:block; object-fit:contain;"></canvas>
+
+              <!-- Magnifying Loupe Overlay -->
+              <div id="loupe" style="display:none; position:absolute; width:100px; height:100px; border-radius:50%; border:3px solid #ffffff; box-shadow:0 0 0 1px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.5); pointer-events:none; transform:translate(-50%, -50%); overflow:hidden; z-index:10; background:#000;">
+                <canvas id="loupeCanvas" width="100" height="100" style="display:block; width:100%; height:100%;"></canvas>
+                <!-- Reticle crosshair -->
+                <div style="position:absolute; top:50%; left:50%; width:8px; height:8px; border:1.5px solid #fff; border-radius:50%; transform:translate(-50%, -50%); box-shadow:0 0 2px #000;"></div>
+              </div>
+            </div>
+            
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.75rem; font-size:0.8rem; color:var(--text-muted);">
+              <span id="imgDimensions">Dimensions: 0 &times; 0 px</span>
+              <span>Tip: Click anywhere to pin color</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- In-Content Ad Slot -->
+        <div class="ad-slot ad-slot-incontent" id="ad-content-mid">
+          <span class="ad-slot-label">Sponsored Advertisement</span>
+          <div class="ad-slot-placeholder">Ad Unit Mid-Article (728x90)</div>
+        </div>
+
+        <!-- How to Use Section -->
+        <section class="info-section">
+          <h2>How to Extract Color Palettes &amp; Sample Pixels</h2>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-num">1</div>
+              <h3>Upload Image</h3>
+              <p>Drag and drop any photograph, illustration, logo, or design mockup into the drop zone.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">2</div>
+              <h3>Explore Dominant Palette</h3>
+              <p>Our in-browser algorithm clusters the pixel data into the top 6 harmonious dominant shades.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">3</div>
+              <h3>Inspect with Loupe</h3>
+              <p>Move your mouse over any image detail to zoom in with the magnifying eyedropper and click to grab the exact pixel color.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">4</div>
+              <h3>Copy or Export</h3>
+              <p>Click any color code to copy to your clipboard, or export the palette as CSS variables or an image swatch card.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="info-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span>How does the color extractor determine dominant colors?</span>
+                <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>The tool samples the image pixels on an HTML5 canvas and runs an adaptive quantization clustering algorithm. By grouping nearby chromatic values and ignoring extreme outliers, it identifies the primary aesthetic tones that define the composition.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span>Can I copy colors directly to my Tailwind or CSS stylesheets?</span>
+                <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>Yes! Simply click the "Copy CSS" button above the palette. It formats your extracted palette as ready-to-paste CSS custom properties (<code>--color-primary</code>, <code>--color-accent</code>, etc.).</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                <span>Is my artwork uploaded to a server?</span>
+                <svg class="faq-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>No. Your files never leave your computer. All pixel calculations and eyedropper loupe magnification happen directly in your browser's local memory using the HTML5 Canvas API.</p>
+              </div>
+            </details>
+          </div>
+        </section>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="tool-sidebar">
+        <!-- Sidebar Ad Slot -->
+        <div class="ad-slot ad-slot-sidebar" id="ad-sidebar">
+          <span class="ad-slot-label">Sponsored Advertisement</span>
+          <div class="ad-slot-placeholder">Sidebar Ad Unit (300x250)</div>
+        </div>
+
+        <!-- Privacy Card -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-success)" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            100% Private &amp; Offline
+          </div>
+          <p style="font-size:0.875rem; color:var(--text-secondary); line-height:1.6; margin:0;">
+            Images remain entirely on your local machine. No external servers or API calls are used. Safe for client mockups and proprietary design assets.
+          </p>
+        </div>
+
+        <!-- Related Image Tools -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            Image Studio Tools
+          </div>
+          <div class="related-tools-list">
+            <a href="image-compressor.html" class="related-tool-item">
+              <div class="related-tool-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+              </div>
+              <div>
+                <div style="font-weight:600; font-size:0.875rem;">Image Compressor</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Shrink file sizes up to 90%</div>
+              </div>
+            </a>
+
+            <a href="image-converter.html" class="related-tool-item">
+              <div class="related-tool-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+              </div>
+              <div>
+                <div style="font-weight:600; font-size:0.875rem;">Format Converter</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Convert JPG, PNG, WebP</div>
+              </div>
+            </a>
+
+            <a href="image-cropper.html" class="related-tool-item">
+              <div class="related-tool-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v14a2 2 0 0 0 2 2h14"></path><path d="M18 22V8a2 2 0 0 0-2-2H2"></path></svg>
+              </div>
+              <div>
+                <div style="font-weight:600; font-size:0.875rem;">Image Cropper</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Crop to 1:1, 16:9, 9:16</div>
+              </div>
+            </a>
+
+            <a href="image-filters.html" class="related-tool-item">
+              <div class="related-tool-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 1 0 18v-18z"></path></svg>
+              </div>
+              <div>
+                <div style="font-weight:600; font-size:0.875rem;">Photo Filters</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Cinematic &amp; vintage effects</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <div class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            Tool<span>Forge</span>
+          </a>
+          <p>Studio-grade, ultra-fast online productivity utilities. All processing happens client-side in your browser for absolute privacy and speed.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Free Tools</h4>
+          <ul class="footer-links">
+            <li><a href="image-compressor.html">Image Compressor</a></li>
+            <li><a href="image-converter.html">Format Converter</a></li>
+            <li><a href="image-cropper.html">Image Cropper</a></li>
+            <li><a href="image-color-extractor.html">Color Extractor</a></li>
+            <li><a href="image-filters.html">Photo Filters</a></li>
+            <li><a href="emi-calculator.html">Loan Calculator</a></li>
+            <li><a href="sip-calculator.html">SIP Wealth Calculator</a></li>
+            <li><a href="gst-calculator.html">GST Tax Calculator</a></li>
+            <li><a href="qr-code-generator.html">QR Code Foundry</a></li>
+            <li><a href="word-counter.html">Text Intelligence</a></li>
+            <li><a href="pdf-merge.html">PDF Combiner</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact &amp; Feedback</a></li>
+            <li><a href="sitemap.xml">XML Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal &amp; Privacy</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ToolForge. All rights reserved.</p>
+        <p>100% Client-Side Processing &bull; Static Site</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/image-color-extractor.js"></script>
+</body>
+</html>
