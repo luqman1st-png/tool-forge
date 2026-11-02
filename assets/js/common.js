@@ -222,4 +222,20 @@
     });
   })();
 
+  // 8. Global Keyboard Shortcut for Search (Ctrl+K and /)
+  window.addEventListener('keydown', (e) => {
+    const isSearchShortcut = (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k';
+    const isSlashShortcut = e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA';
+
+    if (isSearchShortcut || isSlashShortcut) {
+      const searchInput = document.getElementById('toolSearchInput');
+      if (searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+        searchInput.select();
+        searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
+
 })();

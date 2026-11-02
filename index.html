@@ -336,7 +336,10 @@
 
       <div class="header-actions">
         <span class="btn-header-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand-success)" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          <span class="live-pulse-dot">
+            <span class="pulse-ring"></span>
+            <span class="pulse-core"></span>
+          </span>
           100% In-Browser
         </span>
 
@@ -390,23 +393,33 @@
   </div>
 
   <main class="container">
-    <!-- Hero Section (Unique, Studio-Grade Copywriting) -->
+    <!-- Hero Section (Linear & Design.com Studio Aesthetics) -->
     <section class="hero">
-      <div style="display:inline-flex; align-items:center; gap:0.5rem; background:rgba(99, 102, 241, 0.12); border:1px solid rgba(99, 102, 241, 0.25); color:#a5b4fc; padding:0.4rem 1rem; font-size:0.8125rem; font-weight:700; border-radius:99px; margin-bottom:1.5rem; letter-spacing:0.04em; text-transform:uppercase;">
-        <span style="color:#6ee7b7;">●</span> Zero Server Uploads &bull; Instant Client Compute
+      <div class="hero-badge">
+        <span class="live-pulse-dot">
+          <span class="pulse-ring"></span>
+          <span class="pulse-core"></span>
+        </span>
+        <span>100% In-Browser &bull; Zero Server Uploads &bull; Private &amp; Air-Gapped</span>
       </div>
       <h1 class="hero-title">
         Studio-grade web tools, <br>
-        <span style="background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #38bdf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">powered by your browser.</span>
+        <span>powered by your browser.</span>
       </h1>
       <p class="hero-subtitle">
         Compress high-res images with zero detail loss, architect mortgage schedules, forge sharp vector QR codes, and merge sensitive documents at native hardware speed.
       </p>
 
-      <!-- Design.com Signature Floating Prompt / Search Box -->
+      <!-- Design.com Signature Floating Prompt / Search Box (Linear Pro Look) -->
       <div class="design-prompt-box">
         <div class="prompt-input-row">
-          <input type="text" id="toolSearchInput" placeholder="Ask or search for anything... (e.g. shrink photo, mortgage emi, wifi qr, merge pdfs)" autocomplete="off">
+          <div class="search-input-wrapper">
+            <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="toolSearchInput" placeholder="Ask or search for anything... (e.g. shrink photo, mortgage emi, wifi qr, merge pdfs)" autocomplete="off">
+            <div class="search-kbd-shortcut" title="Press Ctrl+K or / to search">
+              <kbd>Ctrl</kbd><kbd>K</kbd>
+            </div>
+          </div>
         </div>
         <div class="prompt-actions-row">
           <div class="prompt-chips">
@@ -442,6 +455,10 @@
               <span class="tool-tag">Pixel Perfect</span>
             </div>
           </div>
+          <div class="tool-card-pills">
+            <span class="tool-micro-pill">⚡ GPU Canvas</span>
+            <span class="tool-micro-pill">Lossless Scaling</span>
+          </div>
           <p class="tool-card-desc">
             Reclaim bandwidth and storage. Losslessly compress and resize JPEG, PNG, and modern WebP assets with hardware-accelerated bicubic canvas scaling and live side-by-side inspection.
           </p>
@@ -466,6 +483,10 @@
               <span class="tool-tag">Multi-Format Batch</span>
             </div>
           </div>
+          <div class="tool-card-pills">
+            <span class="tool-micro-pill">WebP &bull; PNG &bull; JPG</span>
+            <span class="tool-micro-pill">Batch Export</span>
+          </div>
           <p class="tool-card-desc">
             Instantly transcode images between modern WebP, crisp PNG, and universally compatible JPEG. Fine-tune fidelity with dynamic quality compression and batch export.
           </p>
@@ -488,6 +509,10 @@
               <h2 class="tool-card-title"><a href="image-cropper.html">Aspect Ratio &amp; Crop Studio</a></h2>
               <span class="tool-tag">Social Presets</span>
             </div>
+          </div>
+          <div class="tool-card-pills">
+            <span class="tool-micro-pill">Social 1:1, 16:9, 9:16</span>
+            <span class="tool-micro-pill">Rotate &amp; Flip</span>
           </div>
           <p class="tool-card-desc">
             Frame photos for Instagram, TikTok, YouTube, and portfolio reels. Interactive framing box with 1:1, 16:9, 9:16, 4:5 presets, 90&deg; rotation, and horizontal/vertical flips.
@@ -516,6 +541,10 @@
               <span class="tool-tag">Design Palette Engine</span>
             </div>
           </div>
+          <div class="tool-card-pills">
+            <span class="tool-micro-pill">Magnifying Eyedropper</span>
+            <span class="tool-micro-pill">CSS &bull; HEX &bull; RGB</span>
+          </div>
           <p class="tool-card-desc">
             Extract dominant harmonic color schemes from photography and digital art. Includes an interactive magnifying loupe eyedropper, live HEX/RGB copy, and CSS variable export.
           </p>
@@ -538,6 +567,10 @@
               <h2 class="tool-card-title"><a href="image-filters.html">Photo Filters &amp; Effects</a></h2>
               <span class="tool-tag">GPU Filter Engine</span>
             </div>
+          </div>
+          <div class="tool-card-pills">
+            <span class="tool-micro-pill">Cinematic Film Looks</span>
+            <span class="tool-micro-pill">Precision Tone Sliders</span>
           </div>
           <p class="tool-card-desc">
             Elevate photographs with curated film looks: Cinematic Moody, Vintage 70s, Cyberpunk Neon, Noir, and Golden Hour. Granular tone sliders for brightness, contrast, and hue rotation.
@@ -564,6 +597,10 @@
               <span class="tool-tag">Financial Intel</span>
             </div>
           </div>
+          <div class="tool-card-pills">
+            <span class="tool-micro-pill">Interactive SVG Donut</span>
+            <span class="tool-micro-pill">Amortization Table</span>
+          </div>
           <p class="tool-card-desc">
             Demystify debt and interest trajectories. Calculate exact monthly payments, inspect interactive SVG principal-vs-interest visualizers, and export complete amortization schedules to CSV.
           </p>
@@ -589,6 +626,10 @@
               <span class="tool-tag">Compound Intel</span>
             </div>
           </div>
+          <div class="tool-card-pills">
+            <span class="tool-micro-pill">SIP vs Lumpsum</span>
+            <span class="tool-micro-pill">CSV Trajectory Export</span>
+          </div>
           <p class="tool-card-desc">
             Forecast long-term compounding across monthly SIPs or one-time lumpsum deposits. Real-time SVG donut breakdown, projected maturity trajectories, and year-by-year CSV export.
           </p>
@@ -611,6 +652,10 @@
               <h2 class="tool-card-title"><a href="gst-calculator.html">GST &amp; Sales Tax Studio</a></h2>
               <span class="tool-tag">Tax Intelligence</span>
             </div>
+          </div>
+          <div class="tool-card-pills">
+            <span class="tool-micro-pill">Add / Remove GST</span>
+            <span class="tool-micro-pill">CGST &bull; SGST &bull; IGST</span>
           </div>
           <p class="tool-card-desc">
             Calculate exact GST added to base pricing or reverse-calculate tax from gross retail MRPs. Fast 5%, 12%, 18%, 28% tax slabs, CGST/SGST/IGST breakdown, and instant invoice copy.
@@ -637,6 +682,10 @@
               <span class="tool-tag">High Resolution</span>
             </div>
           </div>
+          <div class="tool-card-pills">
+            <span class="tool-micro-pill">Wi-Fi Instant Connect</span>
+            <span class="tool-micro-pill">Infinite Scale SVG</span>
+          </div>
           <p class="tool-card-desc">
             Static QR codes that never expire. Encode frictionless Wi-Fi credentials, URLs, and contacts with branded color control, error correction tuning, and infinite-scale SVG vector exports.
           </p>
@@ -660,6 +709,10 @@
               <h2 class="tool-card-title"><a href="word-counter.html">Text Intelligence &amp; Stats</a></h2>
               <span class="tool-tag">Editorial Suite</span>
             </div>
+          </div>
+          <div class="tool-card-pills">
+            <span class="tool-micro-pill">Speech &amp; Reading Time</span>
+            <span class="tool-micro-pill">Case Transformation</span>
           </div>
           <p class="tool-card-desc">
             Audit prose with surgical accuracy. Real-time words, characters, and sentences, cognitive reading/speaking velocity estimates, case transformation engine, and social media safe zones.
@@ -685,6 +738,10 @@
               <h2 class="tool-card-title"><a href="pdf-merge.html">Confidential PDF Combiner</a></h2>
               <span class="tool-tag">Zero Cloud Risk</span>
             </div>
+          </div>
+          <div class="tool-card-pills">
+            <span class="tool-micro-pill">100% In-Browser</span>
+            <span class="tool-micro-pill">Page Reordering Queue</span>
           </div>
           <p class="tool-card-desc">
             Assemble multi-document agreements, tax filings, and statements entirely in memory with pdf-lib. Drag-and-drop page sequencing with 100% cryptographic client confidentiality.
