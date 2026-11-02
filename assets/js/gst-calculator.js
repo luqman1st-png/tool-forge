@@ -114,6 +114,9 @@
   }
 
   function calculateAndRender() {
+    if (currencySelect) {
+      currency = currencySelect.value;
+    }
     const inputVal = Math.max(0, parseFloat(baseAmountInput.value) || 0);
     amountDisplay.textContent = formatMoney(inputVal);
 

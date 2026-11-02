@@ -120,6 +120,9 @@
   }
 
   function calculateAndRender() {
+    if (currencySelect) {
+      currency = currencySelect.value;
+    }
     const P = Math.max(1, parseFloat(investAmount.value) || 0);
     const r = Math.max(0.1, parseFloat(returnRate.value) || 0);
     const t = Math.max(1, parseInt(tenureYears.value, 10) || 1);
